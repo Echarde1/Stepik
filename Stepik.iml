@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_Two/Brackets/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_Two/Net_Packges_Processing/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_Two/Sliding_Window/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_Two/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_Two/Tree_Hight/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_One/BinarySearch/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_One/Counting_Sort/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_One/LargestIncreasingSequence/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_One/MegreSort_Inversion/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_One/Segments_QuickSort_BinarySearch/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_One/Test/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_One/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
