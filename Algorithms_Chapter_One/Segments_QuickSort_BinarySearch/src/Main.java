@@ -1,16 +1,13 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Comparator;
 
 public class Main {
 
     private static int count = 0;
-    private static ArrayList<long[]> segments;
+    private static ArrayList<int[]> segments;
     public static void main(String[] args) throws IOException {
         BufferedReader input = new BufferedReader(new FileReader("/home/danil/Documents/JavaProjects/Stepik/Segments_QuickSort_BinarySearch/input.txt"));
         //BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
@@ -19,7 +16,7 @@ public class Main {
         int k = Integer.parseInt(temp[1]); //Points number
 
         segments = new Main().fillSegments(n, input);
-        long[] points = new Main().fillPoints(k, input);
+        int[] points = new Main().fillPoints(k, input);
 
         segments.sort(Comparator.comparingLong(o -> o[0])); //Javas quickSort
 
@@ -30,7 +27,7 @@ public class Main {
         StringBuilder builder = new StringBuilder();
 
         for (int i = 0; i < k; i++) {
-            ArrayList<long[]> segmTemp = new ArrayList<>(segments); //List without removed elements
+            ArrayList<int[]> segmTemp = new ArrayList<>(segments); //List without removed elements
             builder.append(new Main().binarySearch(segments, points[i], 0, segments.size()));
             builder.append(" ");
             count = 0;
@@ -39,28 +36,28 @@ public class Main {
         System.out.println(builder);
     }
 
-    private long[] fillPoints(int k, BufferedReader input) throws IOException {
+    private int[] fillPoints(int k, BufferedReader input) throws IOException {
         String[] tempPoints = input.readLine().split(" ");
-        long[] points = new long[k];
+        int[] points = new int[k];
         for (int i = 0; i < k; i++) {
             points[i] = Integer.parseInt(tempPoints[i]);
         }
         return points;
     }
 
-    private ArrayList<long[]> fillSegments(int n, BufferedReader input) throws IOException {
-        ArrayList<long[]> segments = new ArrayList<>();
+    private ArrayList<int[]> fillSegments(int n, BufferedReader input) throws IOException {
+        ArrayList<int[]> segments = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             String[] tempSegm = input.readLine().split(" ");
-            long[] values = {
-                    Long.parseLong(tempSegm[0]), Long.parseLong(tempSegm[1])
+            int[] values = {
+                    Integer.parseInt(tempSegm[0]), Integer.parseInt(tempSegm[1])
             };
             segments.add(values);
         }
         return segments;
     }
 
-    private void quickSort(ArrayList<long[]> segments, int low, int high) {
+    private void quickSort(ArrayList<int[]> segments, int low, int high) {
         while (low < high) {
             int pi = partition(segments, low, high);
             if (pi - low < high - pi) {
@@ -74,11 +71,11 @@ public class Main {
         }
     }
 
-    private int partition(ArrayList<long[]> segments, int low, int high) {
+    private int partition(ArrayList<int[]> segments, int low, int high) {
         int random=high + ((int) (Math.random() * (segments.size())))/(high-low+1);
         exch(segments, random,low);
 
-        long[] pivot = segments.get(high);
+        int[] pivot = segments.get(high);
         int pIndex = low;
 
         for (int i = low; i < high; i++) {
@@ -91,10 +88,10 @@ public class Main {
         return pIndex;
     }
 
-    private int binarySearch(ArrayList<long[]> array, long x, int l, int r) {
+    private int binarySearch(ArrayList<int[]> array, int x, int l, int r) {
         while (r > l + 1) {
             int m = (l + r) >> 1;
-            long[] temp = array.get(m);
+            int[] temp = array.get(m);
             if (temp[0] <= x) {
                 if (temp[1] >= x) {
                     count++;
@@ -110,7 +107,7 @@ public class Main {
         }
 
         if (r < array.size()) {
-            long[] temp1 = array.get(r);
+            int[] temp1 = array.get(r);
             if (x >= temp1[0] && x <= temp1[1]) {
                 count++;
                 segments.remove(temp1);
@@ -119,7 +116,7 @@ public class Main {
         }
 
         if (array.size() > 0) {
-            long[] temp2 = array.get(0);
+            int[] temp2 = array.get(0);
             if (x >= temp2[0] && x <= temp2[1]) {
                 count++;
                 segments.remove(temp2);
@@ -131,25 +128,25 @@ public class Main {
 
     private void printSegments() {
         System.out.println("List sorted by initial value");
-        for (long[] segm : segments) {
+        for (int[] segm : segments) {
             System.out.println(segm[0] + " " + segm[1]);
         }
 
     }
 
-    private static void exch(ArrayList<long[]> array, long i, long j) {
-        long[] swap = array.get((int) i);
-        array.set((int) i, array.get((int) j));
-        array.set((int) j, swap);
+    private static void exch(ArrayList<int[]> array, int i, int j) {
+        int[] swap = array.get(i);
+        array.set(i, array.get(j));
+        array.set(j, swap);
     }
 
-    private static int compareTo(long[] val1, long[] val2) {
+    private static int compareTo(int[] val1, int[] val2) {
         if (val1[0] > val2[0]) return 1;
         else if (val1[0] == val2[0]) return 0;
         return -1;
     }
 
-    private static boolean less(long[] val1, long[] val2) {
+    private static boolean less(int[] val1, int[] val2) {
         return compareTo(val1, val2) < 0;
     }
 }
