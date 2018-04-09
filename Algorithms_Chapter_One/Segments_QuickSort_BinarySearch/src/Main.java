@@ -1,7 +1,10 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 
 public class Main {
@@ -9,8 +12,8 @@ public class Main {
     private static int count = 0;
     private static ArrayList<int[]> segments;
     public static void main(String[] args) throws IOException {
-        BufferedReader input = new BufferedReader(new FileReader("/home/danil/Documents/JavaProjects/Stepik/Segments_QuickSort_BinarySearch/input.txt"));
-        //BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+        //BufferedReader input = new BufferedReader(new FileReader("/home/danil/Documents/JavaProjects/Stepik/Algorithms_Chapter_One/Segments_QuickSort_BinarySearch/input.txt"));
+        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
         String[] temp = input.readLine().split(" ");
         int n = Integer.parseInt(temp[0]); //Columns' number
         int k = Integer.parseInt(temp[1]); //Points number
@@ -18,17 +21,26 @@ public class Main {
         segments = new Main().fillSegments(n, input);
         int[] points = new Main().fillPoints(k, input);
 
-        segments.sort(Comparator.comparingLong(o -> o[0])); //Javas quickSort
-
         //new Main().quickSort(segments, 0, n - 1); //Sort segments by initial value
 
         //new Main().printSegments();
 
+        int[][] array = new int[n][2];
+        for (int i = 0; i < segments.size(); i++) {
+            array[i] = segments.get(i)  ;
+        }
+        //System.out.println(Arrays.deepToString(array));
+        Arrays.sort(array, Comparator.comparingInt(o -> o[0]));
+
+        for (int i = 0; i < segments.size(); i++) {
+            segments.set(i, array[i]);
+        }
+
         StringBuilder builder = new StringBuilder();
 
-        for (int i = 0; i < k; i++) {
+            for (int i = 0; i < k; i++) {
             ArrayList<int[]> segmTemp = new ArrayList<>(segments); //List without removed elements
-            builder.append(new Main().binarySearch(segments, points[i], 0, segments.size()));
+            builder.append(new Main().binarySearch(segments, points[i], -1, segments.size()));
             builder.append(" ");
             count = 0;
             segments = new ArrayList<>(segmTemp);
@@ -89,6 +101,7 @@ public class Main {
     }
 
     private int binarySearch(ArrayList<int[]> array, int x, int l, int r) {
+
         while (r > l + 1) {
             int m = (l + r) >> 1;
             int[] temp = array.get(m);
@@ -96,31 +109,13 @@ public class Main {
                 if (temp[1] >= x) {
                     count++;
                     segments.remove(temp);
-                    l = 0;
-                    r = array.size();
+                    //r = array.size();
+                    r--;
                 } else {
                     l = m;
                 }
             } else {
                 r = m;
-            }
-        }
-
-        if (r < array.size()) {
-            int[] temp1 = array.get(r);
-            if (x >= temp1[0] && x <= temp1[1]) {
-                count++;
-                segments.remove(temp1);
-                binarySearch(segments, x, 0, segments.size());
-            }
-        }
-
-        if (array.size() > 0) {
-            int[] temp2 = array.get(0);
-            if (x >= temp2[0] && x <= temp2[1]) {
-                count++;
-                segments.remove(temp2);
-                binarySearch(segments, x, 0, segments.size());
             }
         }
         return count;

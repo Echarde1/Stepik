@@ -16,8 +16,27 @@
       <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_One/Segments_QuickSort_BinarySearch/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_One/Test/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_One/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_One/EditingDistance/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../Temp/apacheds-all-1.5.5.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../Temp/commons-lang-2.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
