@@ -16,10 +16,9 @@ public class Matrix {
         new Matrix().fillTable();
 
         int j;
-        for (int L = 2; L < n; L++) {
-            for (int i = 1; i < n - L + 1; i++) {
-                j = i + L - 1;
-                if (j == n) continue;
+        for (int L = 1; L < n; L++) {
+            for (int i = 1; i < n - L; i++) {
+                j = i + L;
                 D[i][j] = Integer.MAX_VALUE;
                 for (int k = i; k <= j - 1; k++) {
                     D[i][j] = Math.min(D[i][j], D[i][k] + D[k + 1][j] + m[i - 1]*m[k]*m[j]);
