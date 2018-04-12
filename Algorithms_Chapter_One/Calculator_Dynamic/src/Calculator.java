@@ -13,8 +13,8 @@ public class Calculator {
 
         for (int i = 2; i < number + 1; i++) {
             int min = D[i - 1] + 1;
+            if (i % 3 == 0) min = Math.min(min, D[i / 3] + 1);
             if (i % 2 == 0) min = Math.min(min, D[i / 2] + 1);
-            else if (i % 3 == 0) min = Math.min(min, D[i / 3] + 1);
 
             D[i] = min;
         }
