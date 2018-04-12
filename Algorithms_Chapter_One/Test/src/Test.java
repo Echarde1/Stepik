@@ -5,8 +5,8 @@ public class Test {
 
     private static int count = 0;
     public static void main(String[] args) throws IOException {
-        BufferedReader input = new BufferedReader(new FileReader("/home/danil/Documents/JavaProjects/Stepik/Algorithms_Chapter_One/Segments_QuickSort_BinarySearch/input.txt"));
-        //BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader input = new BufferedReader(new FileReader("/home/danil/Documents/JavaProjects/Stepik/Algorithms_Chapter_One/Segments_QuickSort_BinarySearch/input.txt.txt"));
+        //BufferedReader input.txt = new BufferedReader(new InputStreamReader(System.in));
         String[] temp = input.readLine().split(" ");
         int n = Integer.parseInt(temp[0]); //Columns' number
         int k = Integer.parseInt(temp[1]); //Points number

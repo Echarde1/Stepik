@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class Counting_Sort {
     public static void main(String args[]) throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader("/home/danil/Documents/JavaProjects/Stepik/Counting_Sort/src/input.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("/home/danil/Documents/JavaProjects/Stepik/Counting_Sort/src/input.txt.txt"));
         //BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(reader.readLine());
         int[] a = Arrays.stream(reader.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();

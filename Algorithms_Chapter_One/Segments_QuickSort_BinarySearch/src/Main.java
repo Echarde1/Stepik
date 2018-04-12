@@ -12,7 +12,7 @@ public class Main {
     private static int count = 0;
     private static ArrayList<int[]> segments;
     public static void main(String[] args) throws IOException {
-        //BufferedReader input = new BufferedReader(new FileReader("/home/danil/Documents/JavaProjects/Stepik/Algorithms_Chapter_One/Segments_QuickSort_BinarySearch/input.txt"));
+        //BufferedReader input.txt = new BufferedReader(new FileReader("/home/danil/Documents/JavaProjects/Stepik/Algorithms_Chapter_One/Segments_QuickSort_BinarySearch/input.txt.txt"));
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
         String[] temp = input.readLine().split(" ");
         int n = Integer.parseInt(temp[0]); //Columns' number

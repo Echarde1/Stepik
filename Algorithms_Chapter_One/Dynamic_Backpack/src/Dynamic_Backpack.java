@@ -8,7 +8,7 @@ public class Dynamic_Backpack {
     private static int[] prev;
 
     public static void main(String[] args) throws IOException {
-        //BufferedReader reader = new BufferedReader(new FileReader("/home/danil/Documents/JavaProjects/Stepik/Algorithms_Chapter_One/Dynamic_Backpack/input.txt"));
+        //BufferedReader reader = new BufferedReader(new FileReader("/home/danil/Documents/JavaProjects/Stepik/Algorithms_Chapter_One/Dynamic_Backpack/input.txt.txt"));
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String[] temp = reader.readLine().split(" ");
         int W = Integer.parseInt(temp[0]);

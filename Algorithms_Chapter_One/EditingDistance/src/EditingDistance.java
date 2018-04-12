@@ -31,7 +31,7 @@ public class EditingDistance {
     }
 
     private void run() throws FileNotFoundException {
-        Scanner input = new Scanner(new File("/home/danil/Documents/JavaProjects/Stepik/Algorithms_Chapter_One/EditingDistance/input.txt"));
+        Scanner input = new Scanner(new File("/home/danil/Documents/JavaProjects/Stepik/Algorithms_Chapter_One/EditingDistance/input.txt.txt"));
         first = input.next();
         second = input.next();
         d = new int[first.length() + 1][second.length() + 1];

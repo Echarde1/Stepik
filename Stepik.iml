@@ -19,6 +19,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_One/EditingDistance/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_One/Dynamic_Backpack/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_One/Stairway/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_One/Calculator_Dynamic/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

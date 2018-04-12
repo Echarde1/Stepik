@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Tester {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner scn = new Scanner(new File("/home/danil/Documents/JavaProjects/Stepik/Algorithms_Chapter_One/Stairway/input.txt"));
+        Scanner scn = new Scanner(new File("/home/danil/Documents/JavaProjects/Stepik/Algorithms_Chapter_One/Stairway/input.txt.txt"));
         int k = 0;
         int[] answers = new int[]{-205, 32, 5, -2, -1000, 1, 21, -73, 3, 3};
         while (scn.hasNext()) {

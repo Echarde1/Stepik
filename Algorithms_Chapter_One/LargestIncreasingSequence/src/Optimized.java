@@ -5,8 +5,8 @@ import java.util.Arrays;
 
 public class Optimized {
     public static void main(String[] args) throws IOException {
-        BufferedReader input = new BufferedReader(new FileReader("/home/danil/Documents/JavaProjects/Stepik/Algorithms_Chapter_One/LargestIncreasingSequence/input.txt"));
-        //BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader input = new BufferedReader(new FileReader("/home/danil/Documents/JavaProjects/Stepik/Algorithms_Chapter_One/LargestIncreasingSequence/input.txt.txt"));
+        //BufferedReader input.txt = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(input.readLine());
         int[] a = Arrays.stream(input.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
         int[] D = new Optimized().lis(a);

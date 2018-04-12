@@ -5,7 +5,7 @@ import java.util.Stack;
 
 public class Brackets {
     public static void main(String args[]) throws IOException {
-    BufferedReader reader = new BufferedReader(new FileReader("/home/danil/Documents/JavaProjects/Stepik/Algorithms_Chapter_Two/Brackets/input.txt"));
+    BufferedReader reader = new BufferedReader(new FileReader("/home/danil/Documents/JavaProjects/Stepik/Algorithms_Chapter_Two/Brackets/input.txt.txt"));
     //BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     Check check = new Check(reader.readLine());
     int a = check.makeCheck();

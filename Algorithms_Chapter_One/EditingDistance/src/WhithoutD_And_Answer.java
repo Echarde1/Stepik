@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class WhithoutD_And_Answer {
 
     private void run() throws FileNotFoundException {
-        Scanner input = new Scanner(new File("/home/danil/Documents/JavaProjects/Stepik/Algorithms_Chapter_One/EditingDistance/input.txt"));
-        //Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(new File("/home/danil/Documents/JavaProjects/Stepik/Algorithms_Chapter_One/EditingDistance/input.txt.txt"));
+        //Scanner input.txt = new Scanner(System.in);
         String first = input.next();
         String second = input.next();
         //d = new int[first.length() + 1][second.length() + 1];

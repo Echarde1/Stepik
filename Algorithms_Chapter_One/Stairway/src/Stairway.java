@@ -9,7 +9,7 @@ public class Stairway {
 
     public static void main(String[] args) throws IOException {
 
-        //BufferedReader reader = new BufferedReader(new FileReader("/home/danil/Documents/JavaProjects/Stepik/Algorithms_Chapter_One/Stairway/input.txt"));
+        //BufferedReader reader = new BufferedReader(new FileReader("/home/danil/Documents/JavaProjects/Stepik/Algorithms_Chapter_One/Stairway/input.txt.txt"));
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(reader.readLine()); //Number of stairs
         String[] temp = reader.readLine().split(" ");

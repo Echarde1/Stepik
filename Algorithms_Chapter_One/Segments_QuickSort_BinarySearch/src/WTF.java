@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class WTF {
     public static void main(String[] args) throws FileNotFoundException {
-        try (Scanner sc = new Scanner(new File("/home/danil/Documents/JavaProjects/Stepik/Algorithms_Chapter_One/Segments_QuickSort_BinarySearch/input.txt"))) {
+        try (Scanner sc = new Scanner(new File("/home/danil/Documents/JavaProjects/Stepik/Algorithms_Chapter_One/Segments_QuickSort_BinarySearch/input.txt.txt"))) {
             int n = sc.nextInt(); //Segments number
             int k = sc.nextInt(); //Points number
             int[] lefts = new int[n];

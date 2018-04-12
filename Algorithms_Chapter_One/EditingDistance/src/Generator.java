@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Generator {
     public static void main(String[] args) throws FileNotFoundException {
-        PrintWriter out = new PrintWriter("/home/danil/Documents/JavaProjects/Stepik/Algorithms_Chapter_One/EditingDistance/input.txt");
+        PrintWriter out = new PrintWriter("/home/danil/Documents/JavaProjects/Stepik/Algorithms_Chapter_One/EditingDistance/input.txt.txt");
         int n = 10000;
         Random random = new Random();
         for (int i = 0; i < n; i++) {
