@@ -27,12 +27,20 @@ public class Matrix {
         }
         System.out.println(D[1][n - 1]);
 
-        for (int[] row : D) {
-            System.out.println(Arrays.toString(row));
+        for (int i = 1; i < n - 1; i++) {
+            for (int k = 1; k < n; k++) {
+                System.out.print(D[i][k] + " ");
+            }
+            System.out.println();
         }
 
     }
     private void fillTable() {
+        /*for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                D[i][j] = Integer.MAX_VALUE;
+            }
+        }*/
         for (int i = 1; i < n; i++) {
             D[i][i] = 0;
         }
