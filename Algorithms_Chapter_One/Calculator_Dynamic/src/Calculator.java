@@ -35,7 +35,7 @@ public class Calculator {
                 i /= 2;
                 continue;
             }
-            stringBuilder/*.insert(0, " ")*/
+            stringBuilder
                     .insert(0 , 3);
             i /= 3;
         }
