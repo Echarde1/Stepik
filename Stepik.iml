@@ -21,6 +21,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_One/Stairway/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_One/Calculator_Dynamic/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_One/Matrix/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_One/Maximize_Expression_With_Brackets/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_One/Closest_Pair_Of_Points/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

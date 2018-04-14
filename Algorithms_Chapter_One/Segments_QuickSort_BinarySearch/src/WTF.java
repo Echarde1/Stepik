@@ -18,6 +18,7 @@ public class WTF {
                 rights[i] = sc.nextInt();
                 segments.add(new int[]{lefts[i], rights[i]});
             }
+
             segments.sort(Comparator.comparingInt(o -> o[0]));
 
             for (int[] temp : segments) {
