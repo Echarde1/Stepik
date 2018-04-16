@@ -99,8 +99,8 @@ public class Optimized_Points {
         System.arraycopy(P, 0, Px, 0, n);
         System.arraycopy(P, 0, Py, 0, n);
 
-        Arrays.sort(Px, Comparator.comparingInt(o -> o.x));
-        Arrays.sort(Py, Comparator.comparingInt(o -> o.y));
+        Arrays.sort(Px, Comparator.comparingLong(o -> o.x));
+        Arrays.sort(Py, Comparator.comparingLong(o -> o.y));
 
         /*printPoints(P, n);*/
 
@@ -121,11 +121,11 @@ public class Optimized_Points {
     }
 }
 
-class Point {
+class PointG {
     int x;
     int y;
 
-    Point(int x, int y) {
+    PointG(int x, int y) {
         this.x = x;
         this.y = y;
     }

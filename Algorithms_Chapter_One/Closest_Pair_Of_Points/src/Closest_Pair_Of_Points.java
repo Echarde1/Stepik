@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -21,7 +22,6 @@ public class Closest_Pair_Of_Points {
     }
 
     private static double findMinDistance(Point[] P, int low,int high) {
-        printPoints(P, high);
         double min = Double.MAX_VALUE;
         for (int i = low; i < high/*- 1*/; ++i) {
             for (int j = i + 1; j < high; ++j) {
@@ -34,9 +34,7 @@ public class Closest_Pair_Of_Points {
     private static double stripClosest(Point[] strip, int size, double d) {
         double min = d;
 
-        printPoints(strip, size);
-
-        Arrays.sort(strip, Comparator.comparingInt(o -> o.y));
+        Arrays.sort(strip, Comparator.comparingLong(o -> o.y));
 
         for (int i = 0; i < size; ++i) {
             for (int j = i + 1; j < size && (strip[j].y - strip[i].y) < min; ++j) {
@@ -47,14 +45,20 @@ public class Closest_Pair_Of_Points {
         return min;
     }
 
-    private static double closestUtil(Point[] P, int low,int high) {
+    private static double closestUtil(Point[] P, int low, int high) {
         if (high - low <= 3) return findMinDistance(P, low, high);
 
         int mid = (high + low) / 2;
         Point midPoint = P[mid];
 
-        double dl = closestUtil(P, low, mid);
-        double dr = closestUtil(P, mid + 1, high);
+        Point[] Pl = new Point[mid];
+        Point[] Pr = new Point[high - mid];
+
+        System.arraycopy(P, 0, Pl, low, mid);
+        System.arraycopy(P, mid, Pr, low, high - mid);
+
+        double dl = closestUtil(Pl, 0, Pl.length);
+        double dr = closestUtil(Pr, 0, Pr.length);
 
         double d = Math.min(dl, dr);
 
@@ -74,18 +78,16 @@ public class Closest_Pair_Of_Points {
         return Math.min(d, stripClosest(strip, j ,d));
     }
 
-    private static double closest(Point[] P, int n) {
-        Arrays.sort(P, Comparator.comparingInt(o -> o.x));
-
-        printPoints(P, n);
+    static double closest(Point[] P, int n) {
+        Arrays.sort(P, Comparator.comparingLong(o -> o.x));
 
         return closestUtil(P, 0, n);
     }
 
     private static double distance(Point p1, Point p2) {
         return Math.sqrt( (p1.x - p2.x) * (p1.x - p2.x) +
-                          (p1.y - p2.y) * (p1.y - p2.y)
-                        );
+                (p1.y - p2.y) * (p1.y - p2.y)
+        );
     }
 
     private static void printPoints(Point[] P, int n) {
@@ -96,11 +98,11 @@ public class Closest_Pair_Of_Points {
     }
 }
 
-class PointG {
-    int x;
-    int y;
+class Point {
+    long x;
+    long y;
 
-    PointG(int x, int y) {
+    Point(long x, long y) {
         this.x = x;
         this.y = y;
     }
