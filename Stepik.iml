@@ -23,6 +23,12 @@
       <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_One/Matrix/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_One/Maximize_Expression_With_Brackets/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Algorithms_Chapter_One/Closest_Pair_Of_Points/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/KotlinJVM_Intro/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/KotlinJVM_Intro/Second_module/1st_Navigator/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/KotlinJVM_Intro/Second_module/2nd_Navigator/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Android_Developing_With_Kotlin/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Android_Developing_With_Kotlin/2nd_Module/Hello_World_AndOthers/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Android_Developing_With_Kotlin/2nd_Module/Object-Oriented/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -44,5 +50,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
   </component>
 </module>
